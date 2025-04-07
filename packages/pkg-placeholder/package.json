@@ -1,0 +1,32 @@
+{
+  "name": "pkg-placeholder",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "_description_",
+  "author": "YunYouJun",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/YunYouJun",
+  "homepage": "https://github.com/YunYouJun/pkg-placeholder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunYouJun/pkg-placeholder.git"
+  },
+  "bugs": "https://github.com/YunYouJun/pkg-placeholder/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "nr build",
+    "start": "tsx src/index.ts"
+  }
+}
