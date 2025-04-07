@@ -1,8 +1,10 @@
 import type { DefaultTheme } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { getVitepressConfig } from '@yunyoujun/docs'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { version } from '../../package.json'
+
 import vite from './vite.config'
 
 const GUIDES: DefaultTheme.NavItemWithLink[] = [
@@ -15,14 +17,16 @@ const VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] 
   { text: `Release Notes`, link: 'https://github.com/YunYouJun/pkg-placeholder/releases' },
 ]
 
+const vpConfig = getVitepressConfig({
+  repo: 'https://github.com/YunYouJun/starter-monorepo',
+})
+
 export default defineConfig({
+  ...vpConfig,
+
   title: 'pkg-placeholder',
   description: '_description_',
   markdown: {
-    theme: {
-      light: 'vitesse-light',
-      dark: 'vitesse-dark',
-    },
     codeTransformers: [
       transformerTwoslash(),
     ],
@@ -34,6 +38,8 @@ export default defineConfig({
   cleanUrls: true,
   vite,
   themeConfig: {
+    ...vpConfig.themeConfig,
+
     // logo: '/logo.svg',
     nav: [
       {
@@ -56,13 +62,6 @@ export default defineConfig({
           items: GUIDES,
         },
       ],
-    },
-    editLink: {
-      pattern: 'https://github.com/YunYouJun/pkg-placeholder/edit/main/docs/:path',
-      text: 'Suggest changes to this page',
-    },
-    search: {
-      provider: 'local',
     },
 
     socialLinks: [

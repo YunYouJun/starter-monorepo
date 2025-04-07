@@ -1,12 +1,18 @@
 import { fileURLToPath } from 'node:url'
+import { getViteConfig } from '@yunyoujun/docs'
 import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Tsconfig from 'vite-tsconfig-paths'
-import { groupIconVitePlugin as GroupIconVitePlugin } from 'vitepress-plugin-group-icons'
+
+const viteConfig = getViteConfig({})
 
 export default defineConfig({
+  ...viteConfig,
+
   plugins: [
+    ...(viteConfig.plugins || []),
+
     Tsconfig({
       projects: [
         fileURLToPath(new URL('../../tsconfig.json', import.meta.url)),
@@ -23,6 +29,5 @@ export default defineConfig({
     UnoCSS(
       fileURLToPath(new URL('./uno.config.ts', import.meta.url)),
     ),
-    GroupIconVitePlugin(),
   ],
 })
