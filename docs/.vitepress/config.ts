@@ -9,12 +9,11 @@ import vite from './vite.config'
 
 const GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: 'Getting Started', link: '/guide/' },
-  { text: 'Installation & Usage', link: '/guide/install' },
 ]
 
 const VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   { text: `v${version} (current)`, link: '/' },
-  { text: `Release Notes`, link: 'https://github.com/YunYouJun/pkg-placeholder/releases' },
+  { text: `Release Notes`, link: 'https://github.com/YunYouJun/starter-monorepo/releases' },
 ]
 
 const vpConfig = getVitepressConfig({

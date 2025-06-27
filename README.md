@@ -10,7 +10,7 @@ _description_
 
 ## Modify
 
-- [ ] replace `pkg-placeholder`
+- [ ] replace `pkg-placeholder` `starter-monorepo` in repo
 
 ## [Sponsors](https://www.yunyoujun.cn/sponsors/)
 
