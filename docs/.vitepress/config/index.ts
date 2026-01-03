@@ -3,9 +3,7 @@ import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { getVitepressConfig } from '@yunyoujun/docs'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
-import { version } from '../../package.json'
-
-import vite from './vite.config'
+import { version } from '../../../package.json'
 
 const GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: 'Getting Started', link: '/guide/' },
@@ -35,7 +33,7 @@ export default defineConfig({
     },
   },
   cleanUrls: true,
-  vite,
+
   themeConfig: {
     ...vpConfig.themeConfig,
 
