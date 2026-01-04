@@ -1,4 +1,4 @@
-# pkg-placeholder
+# starter-monorepo
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -6,7 +6,39 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+TypeScript Monorepo Starter with VitePress Documentation
+
+## 📚 Documentation
+
+Online documentation: https://starter-monorepo.yunyoujun.cn
+
+## ✨ Features
+
+- 📦 Monorepo architecture with pnpm workspaces
+- 🚀 Fast build with unbuild
+- 📝 Full TypeScript support
+- ✅ Vitest testing framework
+- 📚 Auto-generated API docs (TypeDoc + VitePress)
+- 🔧 ESLint + Git hooks for code quality
+- 🎨 Modern documentation site
+
+## 📦 Installation
+
+```bash
+pnpm add pkg-placeholder
+```
+
+## 🚀 Quick Start
+
+```typescript
+import { one, two } from 'pkg-placeholder'
+
+console.log(one, two) // 1 2
+```
+
+## 📖 More
+
+For detailed documentation, visit: https://starter-monorepo.yunyoujun.cn
 
 ## Modify
 

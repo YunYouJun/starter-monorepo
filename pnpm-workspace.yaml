@@ -26,6 +26,9 @@ catalog:
   pnpm: ^10.27.0
   simple-git-hooks: ^2.13.1
   tsx: ^4.21.0
+  typedoc: ^0.28.15
+  typedoc-plugin-markdown: ^4.9.0
+  typedoc-vitepress-theme: ^1.1.2
   typescript: ^5.9.3
   unbuild: ^3.6.1
   unocss: ^66.5.12

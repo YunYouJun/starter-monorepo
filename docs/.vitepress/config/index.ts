@@ -4,14 +4,18 @@ import { getVitepressConfig } from '@yunyoujun/docs'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { version } from '../../../package.json'
+import typedocSidebar from '../../api/typedoc-sidebar.json'
 
 const GUIDES: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Getting Started', link: '/guide/' },
+  { text: 'What is starter-monorepo?', link: '/guide/what-is' },
+  { text: 'Getting Started', link: '/guide/getting-started' },
+  { text: 'Configuration', link: '/guide/configuration' },
 ]
 
 const VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   { text: `v${version} (current)`, link: '/' },
   { text: `Release Notes`, link: 'https://github.com/YunYouJun/starter-monorepo/releases' },
+  { text: `Changelog`, link: '/changelog' },
 ]
 
 const vpConfig = getVitepressConfig({
@@ -21,8 +25,8 @@ const vpConfig = getVitepressConfig({
 export default defineConfig({
   ...vpConfig,
 
-  title: 'pkg-placeholder',
-  description: '_description_',
+  title: 'starter-monorepo',
+  description: 'TypeScript Monorepo Starter with VitePress Documentation',
   markdown: {
     codeTransformers: [
       transformerTwoslash(),
@@ -37,7 +41,10 @@ export default defineConfig({
   themeConfig: {
     ...vpConfig.themeConfig,
 
-    // logo: '/logo.svg',
+    search: {
+      provider: 'local',
+    },
+
     nav: [
       {
         text: 'Guide',
@@ -46,6 +53,10 @@ export default defineConfig({
             items: GUIDES,
           },
         ],
+      },
+      {
+        text: 'API',
+        link: '/api/',
       },
       {
         text: `v${version}`,
@@ -59,10 +70,11 @@ export default defineConfig({
           items: GUIDES,
         },
       ],
+      '/api/': typedocSidebar,
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/YunYouJun/pkg-placeholder' },
+      { icon: 'github', link: 'https://github.com/YunYouJun/starter-monorepo' },
     ],
 
     footer: {
@@ -72,14 +84,10 @@ export default defineConfig({
   },
 
   head: [
-    // ['meta', { name: 'theme-color', content: '#ffffff' }],
-    // ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
     ['meta', { name: 'author', content: 'YunYouJun' }],
-    // ['meta', { property: 'og:title', content: '' }],
-    // ['meta', { property: 'og:image', content: '' }],
-    // ['meta', { property: 'og:description', content: '_description_' }],
-    // ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    // ['meta', { name: 'twitter:image', content: '' }],
+    ['meta', { property: 'og:title', content: 'starter-monorepo' }],
+    ['meta', { property: 'og:description', content: 'TypeScript Monorepo Starter with VitePress Documentation' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
   ],
 })
