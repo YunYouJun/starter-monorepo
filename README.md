@@ -10,7 +10,7 @@ TypeScript Monorepo Starter with VitePress Documentation
 
 ## 📚 Documentation
 
-Online documentation: https://starter-monorepo.yunyoujun.cn
+Online documentation: https://starter-monorepo.pages.dev/
 
 ## ✨ Features
 
@@ -38,7 +38,7 @@ console.log(one, two) // 1 2
 
 ## 📖 More
 
-For detailed documentation, visit: https://starter-monorepo.yunyoujun.cn
+For detailed documentation, visit: https://starter-monorepo.pages.dev
 
 ## Modify
 
