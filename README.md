@@ -48,7 +48,7 @@ For detailed documentation, visit: https://starter-monorepo.pages.dev
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg'/>
+    <img src='https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg' alt='Sponsors'/>
   </a>
 </p>
 
