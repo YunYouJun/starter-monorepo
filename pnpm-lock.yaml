@@ -25,8 +25,8 @@ catalogs:
       specifier: ^24.13.2
       version: 24.13.2
     '@unocss/reset':
-      specifier: ^66.7.3
-      version: 66.7.3
+      specifier: ^66.7.4
+      version: 66.7.4
     '@vueuse/core':
       specifier: ^14.3.0
       version: 14.3.0
@@ -166,7 +166,7 @@ importers:
         version: 4.3.0(typescript@5.9.3)
       '@unocss/reset':
         specifier: 'catalog:'
-        version: 66.7.3
+        version: 66.7.4
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.3.0(vue@3.5.39(typescript@5.9.3))
@@ -1541,8 +1541,8 @@ packages:
   '@unocss/preset-wind@66.7.3':
     resolution: {integrity: sha512-Uwnni+FrYFlYhDIe6/8IwUUeTQMTwvOmqyxNIjz4mOknMALq5IeuS5WCmq3AI8NqME77xgYPeW9Qx4bGzCyjfQ==}
 
-  '@unocss/reset@66.7.3':
-    resolution: {integrity: sha512-EuWSHSWsl+qdc+7c4car0IPEDbcuyrGUvFqTOo2AV383lOuIzvyuRxkuL1rLqb2kh+ZYkpBnL49+FXmjX36/nA==}
+  '@unocss/reset@66.7.4':
+    resolution: {integrity: sha512-DYUxI/WVIFCMYKc8/jXCQvp26SmB5UvZ3fYEI1jLeb9BHZYtINvHfs1tIDTWSXOIP1s/yOPFeBDx9bm1PBF4zg==}
 
   '@unocss/rule-utils@66.7.3':
     resolution: {integrity: sha512-DKg1Rr/pxc5owCbFTpF1hXGoSqZjX7EzgfOkgO9R0VDnsufXIf776xUw7I3PWKXMMdC3SLnY6jT9bhlnZ6aM7w==}
@@ -3594,6 +3594,7 @@ packages:
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
     engines: {node: ^18 || >=20}
+    deprecated: unmaintained
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -5351,7 +5352,7 @@ snapshots:
       '@unocss/core': 66.7.3
       '@unocss/preset-wind3': 66.7.3
 
-  '@unocss/reset@66.7.3': {}
+  '@unocss/reset@66.7.4': {}
 
   '@unocss/rule-utils@66.7.3':
     dependencies:
