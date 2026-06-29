@@ -13,7 +13,7 @@ export default defineConfig({
 
     Tsconfig({
       projects: [
-        fileURLToPath(new URL('../../tsconfig.json', import.meta.url)),
+        fileURLToPath(new URL('../tsconfig.json', import.meta.url)),
       ],
     }),
   ],
