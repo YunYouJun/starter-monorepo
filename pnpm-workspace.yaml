@@ -1,8 +1,10 @@
-minimumReleaseAge: 0
-shellEmulator: true
+ignoreWorkspaceRootCheck: true
 
-# eslint-disable-next-line pnpm/yaml-enforce-settings
-trustPolicy: off
+minimumReleaseAge: 1440
+shellEmulator: true
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - semver@6.3.1
 allowBuilds:
   esbuild: true
   simple-git-hooks: true
