@@ -2,7 +2,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.13.0",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
