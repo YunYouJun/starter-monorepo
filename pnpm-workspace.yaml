@@ -46,4 +46,4 @@ catalog:
   vitepress: ^2.0.0-alpha.18
   vitepress-plugin-group-icons: ^1.7.5
   vitest: ^4.1.10
-  vue: ^3.5.39
+  vue: ^3.5.40
