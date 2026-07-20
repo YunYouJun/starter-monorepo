@@ -29,7 +29,7 @@ catalog:
   bumpp: ^11.1.0
   eslint: ^10.7.0
   floating-vue: ^5.2.2
-  lint-staged: ^17.0.8
+  lint-staged: ^17.1.0
   pinia: ^3.0.4
   simple-git-hooks: ^2.13.1
   tsx: ^4.23.1
