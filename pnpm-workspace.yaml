@@ -30,7 +30,7 @@ catalog:
   eslint: ^10.7.0
   floating-vue: ^5.2.2
   lint-staged: ^17.0.8
-  pinia: ^3.0.4
+  pinia: ^4.0.2
   simple-git-hooks: ^2.13.1
   tsx: ^4.23.1
   typedoc: ^0.28.20
