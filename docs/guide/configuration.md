@@ -2,29 +2,27 @@
 
 ## Build Configuration
 
-The project uses `unbuild` as the build tool. Configuration is located in each package's `build.config.ts`.
+The project uses `tsdown` as the build tool. Configuration is located in each package's `tsdown.config.ts`.
 
 ### Default Configuration
 
 ```typescript
-import { defineBuildConfig } from 'unbuild'
+import { defineConfig } from 'tsdown'
 
-export default defineBuildConfig({
-  entries: ['src/index'],
-  declaration: true,
-  clean: true,
-  rollup: {
-    emitCJS: false,
-  },
+export default defineConfig({
+  entry: ['src/index.ts'],
+  dts: true,
+  exports: true,
+  publint: true,
 })
 ```
 
 ### Configuration Options
 
-- `entries`: Entry point files
-- `declaration`: Generate TypeScript declaration files
-- `clean`: Clean output directory before build
-- `rollup`: Rollup-specific options
+- `entry`: Entry point files
+- `dts`: Generate TypeScript declaration files
+- `exports`: Keep package exports synchronized with build outputs
+- `publint`: Validate the package after building
 
 ## TypeScript Configuration
 
@@ -33,12 +31,18 @@ TypeScript configuration is in `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
+    "lib": ["ESNext"],
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
     "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "strictNullChecks": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
   }
 }
 ```
@@ -61,6 +65,7 @@ Using pnpm workspaces, configured in `pnpm-workspace.yaml`:
 
 ```yaml
 packages:
+  - apps/*
   - playground
   - docs
   - packages/*
@@ -95,11 +100,12 @@ API documentation is generated with TypeDoc. Configuration is in `typedoc.json`:
 ```json
 {
   "$schema": "https://typedoc.org/schema.json",
-  "docsRoot": "./docs",
   "entryPoints": ["./packages/pkg-placeholder/src/index.ts"],
   "out": "./docs/api",
-  "categorizeByGroup": true,
   "plugin": ["typedoc-plugin-markdown", "typedoc-vitepress-theme"],
+  "readme": "none",
+  "docsRoot": "docs",
+  "gitRevision": "main",
   "sourceLinkTemplate": "https://github.com/YunYouJun/starter-monorepo/tree/{gitRevision}/{path}#L{line}",
   "sidebar": {
     "autoConfiguration": true,

@@ -10,7 +10,7 @@ Built on pnpm workspaces, allowing you to manage multiple packages in a single r
 
 ### 🚀 Fast Development
 
-- **unbuild** - Fast build tool for TypeScript libraries
+- **tsdown** - Rolldown-powered build tool for TypeScript libraries
 - **Vite** - Next-generation frontend tooling
 - **Hot Module Replacement** - Instant feedback during development
 

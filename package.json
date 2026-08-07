@@ -2,9 +2,9 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.13.0",
+  "packageManager": "pnpm@11.20.0",
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
   },
   "scripts": {
     "build": "nr -r build",
@@ -29,13 +29,14 @@
     "eslint": "catalog:",
     "lint-staged": "catalog:",
     "pkg-placeholder": "workspace:*",
+    "publint": "catalog:",
     "simple-git-hooks": "catalog:",
+    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typedoc": "catalog:",
     "typedoc-plugin-markdown": "catalog:",
     "typedoc-vitepress-theme": "catalog:",
     "typescript": "catalog:",
-    "unbuild": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:"
   },

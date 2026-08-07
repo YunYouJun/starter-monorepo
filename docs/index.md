@@ -19,7 +19,7 @@ features:
     details: pnpm workspace for efficient package management
   - icon: 🚀
     title: Fast Build
-    details: Powered by unbuild for rapid development
+    details: Powered by tsdown and Rolldown for rapid development
   - icon: 📝
     title: TypeScript
     details: Full TypeScript support with type safety

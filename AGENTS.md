@@ -7,7 +7,7 @@ TypeScript Monorepo Starter Template (`starter-monorepo`) by YunYouJun.
 - **Purpose**: Reusable monorepo template for building TypeScript libraries
 - **Architecture**: pnpm workspaces with catalog dependencies
 - **Docs**: VitePress + TypeDoc auto-generated API docs
-- **Build**: unbuild
+- **Build**: tsdown
 - **Test**: vitest
 - **Lint**: @antfu/eslint-config (flat config)
 
@@ -15,7 +15,7 @@ TypeScript Monorepo Starter Template (`starter-monorepo`) by YunYouJun.
 
 ```bash
 pnpm build          # Build all packages
-pnpm dev            # Dev mode (unbuild --stub)
+pnpm dev            # Dev mode (tsdown --watch)
 pnpm test           # Run tests
 pnpm lint           # Lint (eslint --cache)
 pnpm typecheck      # Type check (tsc --noEmit)
@@ -30,14 +30,14 @@ pnpm release        # bumpp -r && publish
 - Use `@antfu/ni` commands (`nr`, `nci`) in scripts and CI
 - ESM only (`"type": "module"`)
 - Strict TypeScript
-- Each package in `packages/` has its own `build.config.ts`, `src/`, `test/`
+- Each package in `packages/` has its own `tsdown.config.ts`, `src/`, `test/`
 
 ## Adding a New Package
 
-1. Create `packages/<name>/` with: `src/index.ts`, `test/index.test.ts`, `build.config.ts`, `package.json`
+1. Create `packages/<name>/` with: `src/index.ts`, `test/index.test.ts`, `tsdown.config.ts`, `package.json`
 2. Update `tsconfig.json` paths
 3. Update `typedoc.json` entryPoints
-4. Package exports should use: `"./dist/index.mjs"` (main) + `"./dist/index.d.mts"` (types)
+4. Package exports should use `".": "./dist/index.mjs"` plus `"types": "./dist/index.d.mts"`
 
 ## Code Style
 

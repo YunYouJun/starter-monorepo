@@ -15,18 +15,17 @@
   "keywords": [],
   "sideEffects": false,
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
-    "prepublishOnly": "nr build",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "prepack": "nr build",
     "start": "tsx src/index.ts"
   }
 }

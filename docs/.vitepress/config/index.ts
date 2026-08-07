@@ -3,8 +3,8 @@ import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { getVitepressConfig } from '@yunyoujun/docs'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
-import { version } from '../../../package.json'
-import typedocSidebar from '../../api/typedoc-sidebar.json'
+import { version } from '../../../package.json' with { type: 'json' }
+import typedocSidebar from '../../api/typedoc-sidebar.json' with { type: 'json' }
 
 const GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: 'What is starter-monorepo?', link: '/guide/what-is' },

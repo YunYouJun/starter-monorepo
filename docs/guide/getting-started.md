@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Node.js >= 18
-- pnpm >= 9
+- Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`
+- pnpm `11.20.0` (pinned by the root `packageManager` field)
 
 ## Installation
 
@@ -24,6 +24,7 @@ pnpm install
 
 ```
 starter-monorepo/
+├── apps/                   # Optional applications and integration playgrounds
 ├── docs/                   # Documentation site
 │   ├── .vitepress/        # VitePress config
 │   ├── guide/             # Guide docs
@@ -33,6 +34,7 @@ starter-monorepo/
 │   └── pkg-placeholder/   # Example package
 │       ├── src/           # Source code
 │       ├── test/          # Tests
+│       ├── tsdown.config.ts # Build configuration
 │       └── dist/          # Build output
 ├── package.json           # Root package.json
 ├── pnpm-workspace.yaml    # pnpm workspace config
@@ -84,7 +86,7 @@ Visit `http://localhost:5173` to view the documentation.
 ### Generate API Documentation
 
 ```bash
-pnpm docs:api
+pnpm predocs
 ```
 
 This will:
@@ -121,13 +123,10 @@ cd packages/my-package
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "files": ["dist"]
 }
 ```
@@ -139,18 +138,16 @@ mkdir src
 echo "export const hello = 'world'" > src/index.ts
 ```
 
-4. Add build config (`build.config.ts`):
+4. Add build config (`tsdown.config.ts`):
 
 ```typescript
-import { defineBuildConfig } from 'unbuild'
+import { defineConfig } from 'tsdown'
 
-export default defineBuildConfig({
-  entries: ['src/index'],
-  declaration: true,
-  clean: true,
-  rollup: {
-    emitCJS: false,
-  },
+export default defineConfig({
+  entry: ['src/index.ts'],
+  dts: true,
+  exports: true,
+  publint: true,
 })
 ```
 

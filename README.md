@@ -15,7 +15,7 @@ Online documentation: https://starter-monorepo.pages.dev/
 ## ✨ Features
 
 - 📦 Monorepo architecture with pnpm workspaces
-- 🚀 Fast build with unbuild
+- 🚀 Rolldown-powered library builds with tsdown
 - 📝 Full TypeScript support
 - ✅ Vitest testing framework
 - 📚 Auto-generated API docs (TypeDoc + VitePress)
@@ -39,6 +39,20 @@ console.log(one, two) // 1 2
 ## 📖 More
 
 For detailed documentation, visit: https://starter-monorepo.pages.dev
+
+## Optional Nuxt App
+
+This template stays focused on TypeScript libraries and does not bundle an application by default. If you need an SSR application or an integration playground, you can scaffold [Vitesse for Nuxt](https://github.com/antfu/vitesse-nuxt) under the preconfigured `apps/*` workspace:
+
+```bash
+pnpm dlx degit antfu/vitesse-nuxt apps/web
+```
+
+Before installing dependencies, adapt the generated project to the monorepo:
+
+- Keep the repository root as the only pnpm workspace and lockfile.
+- Merge Vitesse Nuxt's named catalogs into the root `pnpm-workspace.yaml` instead of keeping a nested workspace configuration.
+- Remove the child package's `packageManager` field, then run `pnpm install` from the repository root.
 
 ## Modify
 
