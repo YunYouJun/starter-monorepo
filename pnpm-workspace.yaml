@@ -23,7 +23,7 @@ catalog:
   '@antfu/utils': ^9.3.0
   '@iconify-json/svg-spinners': ^1.2.4
   '@shikijs/vitepress-twoslash': ^4.4.2
-  '@types/node': ^26.1.2
+  '@types/node': ^26.2.0
   '@unocss/reset': ^66.7.5
   '@vueuse/core': ^14.4.0
   '@yunyoujun/docs': ^0.1.14
