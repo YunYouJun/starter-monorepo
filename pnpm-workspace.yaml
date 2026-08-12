@@ -22,20 +22,20 @@ catalog:
   '@antfu/ni': ^30.5.0
   '@antfu/utils': ^9.3.0
   '@iconify-json/svg-spinners': ^1.2.4
-  '@shikijs/vitepress-twoslash': ^4.4.2
-  '@types/node': ^26.1.2
+  '@shikijs/vitepress-twoslash': ^4.4.3
+  '@types/node': ^26.2.0
   '@unocss/reset': ^66.7.5
   '@vueuse/core': ^14.4.0
   '@yunyoujun/docs': ^0.1.14
   bumpp: ^12.2.0
-  eslint: ^10.8.0
+  eslint: ^10.8.1
   floating-vue: ^5.2.2
   lint-staged: ^17.3.0
   pinia: ^4.0.2
   publint: ^0.3.23
   simple-git-hooks: ^2.13.1
   tsdown: ^0.22.14
-  tsx: ^4.23.9
+  tsx: ^4.23.12
   typedoc: ^0.28.20
   typedoc-plugin-markdown: ^4.12.0
   typedoc-vitepress-theme: ^1.1.3
