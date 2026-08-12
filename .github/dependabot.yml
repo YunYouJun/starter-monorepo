@@ -14,6 +14,11 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    ignore:
+      # TypeScript 7 is not supported by TypeDoc, typescript-eslint, or Twoslash yet.
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
     groups:
       node-dependencies:
         dependency-type: development
