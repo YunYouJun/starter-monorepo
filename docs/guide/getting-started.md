@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`
-- pnpm `11.20.0` (pinned by the root `packageManager` field)
+- pnpm `11.21.0` (pinned by the root `packageManager` field)
 
 ## Installation
 
@@ -27,7 +27,8 @@ starter-monorepo/
 ├── apps/                   # Optional applications and integration playgrounds
 ├── docs/                   # Documentation site
 │   ├── .vitepress/        # VitePress config
-│   ├── guide/             # Guide docs
+│   ├── guide/             # English guides
+│   ├── zh/guide/          # Chinese guides
 │   ├── api/               # API docs (auto-generated)
 │   └── public/            # Static assets
 ├── packages/

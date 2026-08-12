@@ -3,41 +3,41 @@ layout: home
 
 hero:
   name: "starter-monorepo"
-  text: "Monorepo Starter Template"
-  tagline: TypeScript Monorepo Starter with VitePress Documentation
+  text: "Monorepo 起始模板"
+  tagline: 基于 TypeScript、内置 VitePress 文档的 Monorepo 起始模板
   image:
     src: /hero.png
-    alt: Connected package cubes representing a monorepo workspace
+    alt: 由多个相连包组成的 Monorepo 工作区
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/getting-started
+      text: 快速开始
+      link: /zh/guide/getting-started
     - theme: alt
-      text: View on GitHub
+      text: 在 GitHub 查看
       link: https://github.com/YunYouJun/starter-monorepo
 
 features:
   - icon: 📦
-    title: Monorepo Architecture
-    details: pnpm workspace for efficient package management
+    title: Monorepo 架构
+    details: 使用 pnpm workspace 高效管理多个包
   - icon: 🚀
-    title: Fast Build
-    details: Powered by tsdown and Rolldown for rapid development
+    title: 高速构建
+    details: 由 tsdown 和 Rolldown 驱动，提供快速的开发体验
   - icon: 📝
     title: TypeScript
-    details: Full TypeScript support with type safety
+    details: 完整的 TypeScript 支持与类型安全保障
   - icon: ✅
-    title: Testing
-    details: Built-in Vitest for unit testing
+    title: 测试
+    details: 内置 Vitest 单元测试框架
   - icon: 📚
-    title: Auto Documentation
-    details: API docs generated via TypeDoc + VitePress
+    title: 自动化文档
+    details: 使用 TypeDoc 和 VitePress 自动生成 API 文档
   - icon: 🔧
-    title: Developer Experience
-    details: ESLint, Git hooks, and modern tooling
+    title: 开发体验
+    details: 集成 ESLint、Git Hooks 与现代化工具链
 ---
 
-## Quick Start
+## 快速开始
 
 [![npm version](https://img.shields.io/npm/v/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669)](https://npmjs.com/package/pkg-placeholder)
 

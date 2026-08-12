@@ -1,10 +1,10 @@
-# Configuration
+# 配置
 
-## Build Configuration
+## 构建配置
 
-The project uses `tsdown` as the build tool. Configuration is located in each package's `tsdown.config.ts`.
+项目使用 `tsdown` 作为构建工具。每个包的配置都位于各自的 `tsdown.config.ts` 中。
 
-### Default Configuration
+### 默认配置
 
 ```typescript
 import { defineConfig } from 'tsdown'
@@ -17,16 +17,16 @@ export default defineConfig({
 })
 ```
 
-### Configuration Options
+### 配置项
 
-- `entry`: Entry point files
-- `dts`: Generate TypeScript declaration files
-- `exports`: Keep package exports synchronized with build outputs
-- `publint`: Validate the package after building
+- `entry`：入口文件
+- `dts`：生成 TypeScript 类型声明文件
+- `exports`：让包的导出配置与构建产物保持同步
+- `publint`：构建后验证包的配置
 
-## TypeScript Configuration
+## TypeScript 配置
 
-TypeScript configuration is in `tsconfig.json`:
+TypeScript 配置位于 `tsconfig.json`：
 
 ```json
 {
@@ -47,21 +47,21 @@ TypeScript configuration is in `tsconfig.json`:
 }
 ```
 
-## ESLint Configuration
+## ESLint 配置
 
-The project uses `@antfu/eslint-config`. Configuration is in `eslint.config.ts`:
+项目使用 `@antfu/eslint-config`，配置位于 `eslint.config.ts`：
 
 ```typescript
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
-  // Your custom config
+  // 在此添加自定义配置
 })
 ```
 
-## Package Manager Configuration
+## 包管理器配置
 
-Using pnpm workspaces, configured in `pnpm-workspace.yaml`:
+项目使用 pnpm workspace，并在 `pnpm-workspace.yaml` 中配置：
 
 ```yaml
 packages:
@@ -74,7 +74,7 @@ packages:
 
 ## Git Hooks
 
-Using `simple-git-hooks` and `lint-staged` for pre-commit checks:
+项目使用 `simple-git-hooks` 和 `lint-staged` 执行提交前检查：
 
 ```json
 {
@@ -87,15 +87,15 @@ Using `simple-git-hooks` and `lint-staged` for pre-commit checks:
 }
 ```
 
-## Documentation Configuration
+## 文档配置
 
-### VitePress Configuration
+### VitePress 配置
 
-Documentation is built with VitePress. Configuration is in `docs/.vitepress/config/index.ts`.
+文档使用 VitePress 构建，配置位于 `docs/.vitepress/config/index.ts`。
 
-### TypeDoc Configuration
+### TypeDoc 配置
 
-API documentation is generated with TypeDoc. Configuration is in `typedoc.json`:
+API 文档使用 TypeDoc 生成，配置位于 `typedoc.json`：
 
 ```json
 {
@@ -116,9 +116,9 @@ API documentation is generated with TypeDoc. Configuration is in `typedoc.json`:
 }
 ```
 
-### Customizing Docs
+### 自定义文档
 
-To add more packages to API documentation, update `typedoc.json`:
+如需为更多包生成 API 文档，请更新 `typedoc.json`：
 
 ```json
 {
@@ -129,11 +129,11 @@ To add more packages to API documentation, update `typedoc.json`:
 }
 ```
 
-## Environment Variables
+## 环境变量
 
-No environment variables are required for basic usage. For deployment, see deployment configuration.
+基本使用无需配置环境变量。部署相关配置请参考部署平台的说明。
 
-## Next Steps
+## 后续步骤
 
-- Read the [Getting Started Guide](/guide/getting-started)
-- Explore [API Reference](/api/)
+- 阅读[快速开始指南](/zh/guide/getting-started)
+- 浏览 [API 参考（英文）](/api/)
