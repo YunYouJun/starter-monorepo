@@ -42,17 +42,13 @@ For detailed documentation, visit: https://starter-monorepo.pages.dev
 
 ## Optional Nuxt App
 
-This template stays focused on TypeScript libraries and does not bundle an application by default. If you need an SSR application or an integration playground, you can scaffold [Vitesse for Nuxt](https://github.com/antfu/vitesse-nuxt) under the preconfigured `apps/*` workspace:
+This template stays focused on TypeScript libraries and does not bundle an application by default. If you need a deployable SSR or full-stack application, you can add one under the preconfigured `apps/*` workspace using [Vitesse for Nuxt](https://github.com/antfu/vitesse-nuxt) as a reference:
 
-```bash
-pnpm dlx degit antfu/vitesse-nuxt apps/web
-```
-
-Before installing dependencies, adapt the generated project to the monorepo:
-
-- Keep the repository root as the only pnpm workspace and lockfile.
-- Merge Vitesse Nuxt's named catalogs into the root `pnpm-workspace.yaml` instead of keeping a nested workspace configuration.
-- Remove the child package's `packageManager` field, then run `pnpm install` from the repository root.
+See the `apps/web` integration guide in
+[English](./apps/web/README.md) or
+[简体中文](./apps/web/README.zh-CN.md) for the recommended Nuxt 4 structure,
+dependency catalog setup, and the repository-level files that should not be
+copied from the standalone template.
 
 ## Modify
 

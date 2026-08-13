@@ -28,12 +28,14 @@ const ZH_MARKDOWN = {
 const EN_GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: 'What is starter-monorepo?', link: '/guide/what-is' },
   { text: 'Getting Started', link: '/guide/getting-started' },
+  { text: 'Nuxt Web Application', link: '/guide/web-app' },
   { text: 'Configuration', link: '/guide/configuration' },
 ]
 
 const ZH_GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: '什么是 starter-monorepo？', link: '/zh/guide/what-is' },
   { text: '快速开始', link: '/zh/guide/getting-started' },
+  { text: 'Nuxt Web 应用', link: '/zh/guide/web-app' },
   { text: '配置', link: '/zh/guide/configuration' },
 ]
 

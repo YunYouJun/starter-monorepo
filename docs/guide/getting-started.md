@@ -24,7 +24,8 @@ pnpm install
 
 ```
 starter-monorepo/
-├── apps/                   # Optional applications and integration playgrounds
+├── apps/
+│   └── web/                # Optional deployable Nuxt application
 ├── docs/                   # Documentation site
 │   ├── .vitepress/        # VitePress config
 │   ├── guide/             # English guides
@@ -41,6 +42,23 @@ starter-monorepo/
 ├── pnpm-workspace.yaml    # pnpm workspace config
 └── tsconfig.json          # TypeScript config
 ```
+
+### Optional Nuxt application
+
+Use `apps/web` for a general deployable Nuxt application. The name `web`
+describes its platform while leaving room for its role to grow and for sibling
+applications such as `apps/mobile`, `apps/desktop`, or `apps/admin`.
+
+Reserve `apps/site` for an explicitly content, marketing, or corporate website
+that may coexist with a separate product web app. Avoid framework-based names
+such as `apps/nuxt`; application directories should communicate their
+responsibility or platform.
+
+The workspace already includes the `apps/*` package glob. Once
+`apps/web/package.json` exists, pnpm will discover it automatically. See the
+[Nuxt Web Application guide](/guide/web-app) for the recommended Nuxt 4
+structure and instructions for adapting Vitesse Nuxt without creating a nested
+workspace or lockfile.
 
 ## Development
 

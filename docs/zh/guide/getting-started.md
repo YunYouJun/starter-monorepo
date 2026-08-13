@@ -24,7 +24,8 @@ pnpm install
 
 ```
 starter-monorepo/
-├── apps/                   # 可选的应用与集成演练场
+├── apps/
+│   └── web/                # 可选且可独立部署的 Nuxt 应用
 ├── docs/                   # 文档站点
 │   ├── .vitepress/        # VitePress 配置
 │   ├── guide/             # 英文指南
@@ -41,6 +42,20 @@ starter-monorepo/
 ├── pnpm-workspace.yaml    # pnpm workspace 配置
 └── tsconfig.json          # TypeScript 配置
 ```
+
+### 可选的 Nuxt 应用
+
+通用且可独立部署的 Nuxt 应用建议命名为 `apps/web`。`web` 描述其运行平台，不会
+限制应用未来的产品职责，也方便并列添加 `apps/mobile`、`apps/desktop` 或
+`apps/admin`。
+
+如果应用明确是内容站、营销站或企业官网，并且未来可能与独立的产品 Web 应用
+并存，可以使用 `apps/site`。应避免 `apps/nuxt` 这类基于框架的名称；应用目录
+应该表达职责或平台。
+
+workspace 已配置 `apps/*` package glob。创建 `apps/web/package.json` 后，pnpm
+会自动识别该应用。Nuxt 4 目录结构以及在不创建嵌套 workspace 和 lockfile 的
+前提下接入 Vitesse Nuxt 的步骤，请参阅 [Nuxt Web 应用指南](/zh/guide/web-app)。
 
 ## 开发
 
