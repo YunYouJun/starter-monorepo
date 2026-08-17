@@ -27,7 +27,7 @@ catalog:
   '@unocss/reset': ^66.7.5
   '@vueuse/core': ^14.4.0
   '@yunyoujun/docs': ^0.1.14
-  bumpp: ^12.2.0
+  bumpp: ^12.2.1
   eslint: ^10.8.1
   floating-vue: ^5.2.2
   lint-staged: ^17.3.0
