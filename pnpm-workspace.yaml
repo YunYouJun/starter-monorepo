@@ -28,7 +28,7 @@ catalog:
   '@vueuse/core': ^14.4.0
   '@yunyoujun/docs': ^0.1.14
   bumpp: ^12.2.0
-  eslint: ^10.8.1
+  eslint: ^10.9.0
   floating-vue: ^5.2.2
   lint-staged: ^17.3.0
   pinia: ^4.0.2
