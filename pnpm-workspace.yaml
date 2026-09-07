@@ -24,7 +24,7 @@ catalog:
   '@antfu/utils': ^9.3.0
   '@iconify-json/svg-spinners': ^1.2.4
   '@shikijs/vitepress-twoslash': ^4.4.3
-  '@types/node': ^26.4.0
+  '@types/node': ^26.4.1
   '@unocss/reset': ^66.8.1
   '@vueuse/core': ^14.4.0
   '@yunyoujun/docs': ^0.1.14
