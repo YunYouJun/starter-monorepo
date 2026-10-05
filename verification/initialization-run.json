@@ -1,0 +1,210 @@
+{
+  "startedAt": "2026-10-04T22:03:35.517Z",
+  "platform": "darwin arm64",
+  "node": "v24.18.0",
+  "base": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw",
+  "steps": [
+    {
+      "label": "pnpm-version",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "--version"
+      ],
+      "cwd": "/Users/yunyou/repos/github.com/YunYouJun/starter-monorepo/",
+      "exitCode": 0,
+      "durationMs": 781,
+      "log": "initialization-output/01-pnpm-version.txt"
+    },
+    {
+      "label": "initialize",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/repos/github.com/YunYouJun/starter-monorepo/scripts/init.mjs",
+        "--project-name",
+        "acceptance-library",
+        "--package-name",
+        "@acceptance/core",
+        "--description",
+        "验收 TypeScript library: \"quotes\", $& and \\ paths",
+        "--dir",
+        "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project"
+      ],
+      "cwd": "/Users/yunyou/repos/github.com/YunYouJun/starter-monorepo/",
+      "exitCode": 0,
+      "durationMs": 95,
+      "log": "initialization-output/02-initialize.txt"
+    },
+    {
+      "label": "install",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 5023,
+      "log": "initialization-output/03-install.txt"
+    },
+    {
+      "label": "typecheck",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "typecheck"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 2385,
+      "log": "initialization-output/04-typecheck.txt"
+    },
+    {
+      "label": "test",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "test"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 2042,
+      "log": "initialization-output/05-test.txt"
+    },
+    {
+      "label": "lint",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "lint"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 5934,
+      "log": "initialization-output/06-lint.txt"
+    },
+    {
+      "label": "build",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "build"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 3423,
+      "log": "initialization-output/07-build.txt"
+    },
+    {
+      "label": "docs-build",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "docs:build"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 8139,
+      "log": "initialization-output/08-docs-build.txt"
+    },
+    {
+      "label": "pack",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "-C",
+        "packages/core",
+        "pack",
+        "--pack-destination",
+        "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/artifacts"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project",
+      "exitCode": 0,
+      "durationMs": 1585,
+      "log": "initialization-output/09-pack.txt"
+    },
+    {
+      "label": "consumer-install",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "add",
+        "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/artifacts/acceptance-core-0.0.0.tgz"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/consumer",
+      "exitCode": 0,
+      "durationMs": 557,
+      "log": "initialization-output/10-consumer-install.txt"
+    },
+    {
+      "label": "consumer-runtime",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "index.mjs"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/consumer",
+      "exitCode": 0,
+      "durationMs": 55,
+      "log": "initialization-output/11-consumer-runtime.txt"
+    },
+    {
+      "label": "consumer-typescript-install",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "add",
+        "-D",
+        "typescript@6.0.3"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/consumer",
+      "exitCode": 0,
+      "durationMs": 1400,
+      "log": "initialization-output/12-consumer-typescript-install.txt"
+    },
+    {
+      "label": "consumer-types-nodenext",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "exec",
+        "tsc",
+        "--noEmit",
+        "--strict",
+        "--module",
+        "NodeNext",
+        "--target",
+        "ES2022",
+        "index.ts"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/consumer",
+      "exitCode": 0,
+      "durationMs": 1530,
+      "log": "initialization-output/13-consumer-types-nodenext.txt"
+    },
+    {
+      "label": "consumer-types-bundler",
+      "command": "/Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node",
+      "args": [
+        "/Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm",
+        "exec",
+        "tsc",
+        "--noEmit",
+        "--strict",
+        "--module",
+        "ESNext",
+        "--moduleResolution",
+        "Bundler",
+        "--target",
+        "ES2022",
+        "index.ts"
+      ],
+      "cwd": "/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/consumer",
+      "exitCode": 0,
+      "durationMs": 1130,
+      "log": "initialization-output/14-consumer-types-bundler.txt"
+    }
+  ],
+  "success": true,
+  "finishedAt": "2026-10-04T22:04:09.614Z"
+}

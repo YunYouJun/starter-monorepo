@@ -1,12 +1,20 @@
 {
+  "name": "starter-monorepo",
   "type": "module",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@11.24.0",
+  "description": "TypeScript Monorepo Starter with VitePress Documentation",
+  "author": "YunYouJun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunYouJun/starter-monorepo.git"
+  },
   "engines": {
     "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
   },
   "scripts": {
+    "init": "node scripts/init.mjs",
     "build": "nr -r build",
     "dev": "nr -r dev",
     "lint": "eslint --cache .",
@@ -16,9 +24,11 @@
     "docs:build": "pnpm build && pnpm predocs && pnpm -C docs run docs:build",
     "docs:preview": "pnpm -C docs run docs:preview",
     "release": "bumpp -r && pnpm -r publish",
-    "test": "vitest",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "verify:init": "node scripts/verify-init.mjs"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",

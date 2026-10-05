@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "starter-monorepo"
   text: "Monorepo 起始模板"
-  tagline: 基于 TypeScript、内置 VitePress 文档的 Monorepo 起始模板
+  tagline: "基于 TypeScript、内置 VitePress 文档的 Monorepo 起始模板"
   image:
     src: /hero.png
     alt: 由多个相连包组成的 Monorepo 工作区

@@ -49,7 +49,7 @@ TypeScript configuration is in `tsconfig.json`:
 
 ## ESLint Configuration
 
-The project uses `@antfu/eslint-config`. Configuration is in `eslint.config.ts`:
+The project uses `@antfu/eslint-config`. Configuration is in `eslint.config.js`:
 
 ```typescript
 import antfu from '@antfu/eslint-config'

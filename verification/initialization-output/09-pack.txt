@@ -1,0 +1,22 @@
+$ nr build
+$ tsdown
+ℹ tsdown v0.22.14 powered by rolldown v1.2.6
+ℹ config file: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project/packages/core/tsdown.config.ts
+ℹ entry: src/index.ts
+ℹ tsconfig: ../../tsconfig.json
+ℹ Build start
+ℹ Cleaning 2 files
+ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+ℹ dist/index.d.mts  0.18 kB │ gzip: 0.13 kB
+ℹ 2 files, total: 0.33 kB
+✔ Build complete in 228ms
+✔ [publint] No issues found (8ms)
+package: @acceptance/core@0.0.0
+Tarball Contents
+dist/index.d.mts
+dist/index.mjs
+LICENSE
+package.json
+README.md
+Tarball Details
+/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/artifacts/acceptance-core-0.0.0.tgz

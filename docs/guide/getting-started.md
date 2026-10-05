@@ -3,21 +3,33 @@
 ## Prerequisites
 
 - Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`
-- pnpm `11.21.0` (pinned by the root `packageManager` field)
+- pnpm `11.24.0` (pinned by the root `packageManager` field)
 
 ## Installation
 
-### Clone the Repository
+<!-- template-only:start -->
+
+### Initialize your project
+
+Clone or download this template, then run the dependency-free initializer:
 
 ```bash
 git clone https://github.com/YunYouJun/starter-monorepo.git
 cd starter-monorepo
+node scripts/init.mjs --project-name my-library --package-name @acme/core \
+  --description "My TypeScript library"
+cd ../my-library
 ```
+
+See [Initialization](./initialization.md) for prompts, validation rules, metadata,
+and local package verification.
+
+<!-- template-only:end -->
 
 ### Install Dependencies
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 ```
 
 ## Project Structure
@@ -97,6 +109,7 @@ pnpm lint
 ### Start Documentation Site
 
 ```bash
+pnpm predocs
 pnpm docs:dev
 ```
 

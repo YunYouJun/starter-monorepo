@@ -1,0 +1,13 @@
+Created /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project
+Library: packages/core
+
+Next, in the generated directory:
+  pnpm install --frozen-lockfile
+  pnpm typecheck
+  pnpm test
+  pnpm build
+  pnpm docs:build
+
+Repository not supplied: add your repository/homepage/bugs to package.json files and enable TypeDoc source links when ready.
+Author not supplied: add your package author when ready; the original MIT license attribution has been preserved.
+Documentation has no deployment URL yet. Initialize your own Git repository/remotes as needed. No packages were published.

@@ -1,0 +1,154 @@
+Interactive initialization: terminal prompts answered in sequence.
+project-name: interactive-library
+package-name: interactive-library
+description: Interactive TypeScript library
+repository: https://github.com/example/interactive-library
+author: Example
+Initializer exit: 0
+
+COMMAND: ['pnpm', 'install', '--frozen-lockfile']
+CWD: /tmp/starter-interactive-20261005
+Scope: all 3 workspace projects
+? Verifying lockfile against supply-chain policies (710 entries)...
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +614
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 614, reused 356, downloaded 0, added 0
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/yunyou/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 614, reused 614, downloaded 0, added 81
+Progress: resolved 614, reused 614, downloaded 0, added 201
+Progress: resolved 614, reused 614, downloaded 0, added 419
+✓ Lockfile passes supply-chain policies (710 entries in 4.5s)
+Progress: resolved 614, reused 614, downloaded 0, added 614, done
+.../node_modules/simple-git-hooks postinstall$ node ./postinstall.js
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: Done
+
+devDependencies:
++ @antfu/eslint-config 9.3.0
++ @antfu/ni 30.5.0
++ @antfu/utils 9.3.0
++ @types/node 26.4.0
++ bumpp 12.2.2
++ eslint 10.9.1
++ interactive-library 0.0.0 <- packages/interactive-library
++ lint-staged 17.4.1
++ publint 0.3.24
++ simple-git-hooks 2.14.0
++ tsdown 0.22.14
++ tsx 4.23.13
++ typedoc 0.28.20
++ typedoc-plugin-markdown 4.13.0
++ typedoc-vitepress-theme 1.1.3
++ typescript 6.0.3
++ vite 8.2.2
++ vitest 4.1.11
+
+. prepare$ simple-git-hooks
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: Done
+Done in 6.3s using pnpm v11.24.0
+
+EXIT: 0
+
+COMMAND: ['pnpm', 'typecheck']
+CWD: /tmp/starter-interactive-20261005
+$ tsc --noEmit
+
+EXIT: 0
+
+COMMAND: ['pnpm', 'lint']
+CWD: /tmp/starter-interactive-20261005
+$ eslint --cache .
+
+EXIT: 0
+
+COMMAND: ['pnpm', 'docs:build']
+CWD: /tmp/starter-interactive-20261005
+$ pnpm build && pnpm predocs && pnpm -C docs run docs:build
+$ nr -r build
+Scope: 2 of 3 workspace projects
+packages/interactive-library build$ tsdown
+packages/interactive-library build: ℹ tsdown v0.22.14 powered by rolldown v1.2.6
+packages/interactive-library build: ℹ config file: /private/tmp/starter-interactive-20261005/packages/interactive-library/tsdown.config.ts
+packages/interactive-library build: ℹ entry: src/index.ts
+packages/interactive-library build: ℹ tsconfig: ../../tsconfig.json
+packages/interactive-library build: ℹ Build start
+packages/interactive-library build: ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+packages/interactive-library build: ℹ dist/index.d.mts  0.18 kB │ gzip: 0.13 kB
+packages/interactive-library build: ℹ 2 files, total: 0.33 kB
+packages/interactive-library build: ✔ Build complete in 1072ms
+packages/interactive-library build: ✔ [publint] No issues found (16ms)
+packages/interactive-library build: Done
+$ typedoc
+[info] Loaded plugin typedoc-plugin-markdown
+[info] Loaded plugin typedoc-vitepress-theme
+[info] markdown generated at ./docs/api
+$ vitepress build
+
+  vitepress 2.0.0-alpha.19  (using vite 8.2.2)
+
+- building client + server bundles...
+✓ building client + server bundles...
+- rendering pages...
+✓ rendering pages...
+build complete in 3.15s.
+
+EXIT: 0

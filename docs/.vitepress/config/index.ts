@@ -1,12 +1,20 @@
 import type { DefaultTheme } from 'vitepress'
+import { existsSync, readFileSync } from 'node:fs'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { getVitepressConfig } from '@yunyoujun/docs'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
-import { version } from '../../../package.json' with { type: 'json' }
-import typedocSidebar from '../../api/typedoc-sidebar.json' with { type: 'json' }
+import packageJson from '../../../package.json' with { type: 'json' }
 
-const REPOSITORY_URL = 'https://github.com/YunYouJun/starter-monorepo'
+// A fresh checkout has no generated API docs until `pnpm predocs` runs.
+const sidebarPath = new URL('../../api/typedoc-sidebar.json', import.meta.url)
+const typedocSidebar: DefaultTheme.SidebarItem[] = existsSync(sidebarPath)
+  ? JSON.parse(readFileSync(sidebarPath, 'utf8'))
+  : []
+
+const { version, description } = packageJson
+const metadata: { description: string, author?: string, repository?: { url: string } } = packageJson
+const REPOSITORY_URL = metadata.repository?.url.replace(/^git\+/, '').replace(/\.git$/, '')
 
 const ZH_MARKDOWN = {
   container: {
@@ -41,13 +49,13 @@ const ZH_GUIDES: DefaultTheme.NavItemWithLink[] = [
 
 const EN_VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   { text: `v${version} (current)`, link: '/' },
-  { text: `Release Notes`, link: `${REPOSITORY_URL}/releases` },
+  ...(REPOSITORY_URL ? [{ text: 'Release Notes', link: `${REPOSITORY_URL}/releases` }] : []),
   { text: `Changelog`, link: '/changelog' },
 ]
 
 const ZH_VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   { text: `v${version}（当前版本）`, link: '/zh/' },
-  { text: `发布说明`, link: `${REPOSITORY_URL}/releases` },
+  ...(REPOSITORY_URL ? [{ text: '发布说明', link: `${REPOSITORY_URL}/releases` }] : []),
   { text: `更新日志（英文）`, link: '/changelog' },
 ]
 
@@ -59,7 +67,7 @@ export default defineConfig({
   ...vpConfig,
 
   title: 'starter-monorepo',
-  description: 'TypeScript Monorepo Starter with VitePress Documentation',
+  description,
   locales: {
     root: {
       label: 'English',
@@ -69,7 +77,7 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh/',
-      description: '基于 TypeScript、内置 VitePress 文档的 Monorepo 起始模板',
+      description,
       markdown: ZH_MARKDOWN,
       themeConfig: {
         nav: [
@@ -102,10 +110,12 @@ export default defineConfig({
           level: [2, 4],
           label: '本页目录',
         },
-        editLink: {
-          pattern: `${REPOSITORY_URL}/edit/main/docs/:path`,
-          text: '在 GitHub 上编辑此页',
-        },
+        editLink: REPOSITORY_URL
+          ? {
+              pattern: `${REPOSITORY_URL}/edit/main/docs/:path`,
+              text: '在 GitHub 上编辑此页',
+            }
+          : undefined,
         lastUpdated: {
           text: '最后更新于',
           formatOptions: {
@@ -120,7 +130,7 @@ export default defineConfig({
         },
         footer: {
           message: '基于 MIT 许可证发布。',
-          copyright: '版权所有 © 2025-PRESENT YunYouJun。',
+          copyright: metadata.author ? `版权所有 © ${metadata.author}` : '',
         },
         darkModeSwitchLabel: '外观',
         lightModeSwitchTitle: '切换到浅色主题',
@@ -234,10 +244,12 @@ export default defineConfig({
       label: 'On this page',
     },
 
-    editLink: {
-      pattern: `${REPOSITORY_URL}/edit/main/docs/:path`,
-      text: 'Edit this page on GitHub',
-    },
+    editLink: REPOSITORY_URL
+      ? {
+          pattern: `${REPOSITORY_URL}/edit/main/docs/:path`,
+          text: 'Edit this page on GitHub',
+        }
+      : undefined,
 
     lastUpdated: {
       text: 'Last updated',
@@ -248,21 +260,19 @@ export default defineConfig({
       next: 'Next page',
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/YunYouJun/starter-monorepo' },
-    ],
+    socialLinks: REPOSITORY_URL ? [{ icon: 'github', link: REPOSITORY_URL }] : [],
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025-PRESENT YunYouJun.',
+      copyright: metadata.author ? `Copyright © ${metadata.author}` : '',
     },
   },
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['meta', { name: 'author', content: 'YunYouJun' }],
+    ['meta', { name: 'author', content: metadata.author ?? '' }],
     ['meta', { property: 'og:title', content: 'starter-monorepo' }],
-    ['meta', { property: 'og:description', content: 'TypeScript Monorepo Starter with VitePress Documentation' }],
+    ['meta', { property: 'og:description', content: description }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
   ],
 })

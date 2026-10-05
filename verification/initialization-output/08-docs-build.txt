@@ -1,0 +1,29 @@
+$ pnpm build && pnpm predocs && pnpm -C docs run docs:build
+$ nr -r build
+Scope: 2 of 3 workspace projects
+packages/core build$ tsdown
+packages/core build: ℹ tsdown v0.22.14 powered by rolldown v1.2.6
+packages/core build: ℹ config file: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project/packages/core/tsdown.config.ts
+packages/core build: ℹ entry: src/index.ts
+packages/core build: ℹ tsconfig: ../../tsconfig.json
+packages/core build: ℹ Build start
+packages/core build: ℹ Cleaning 2 files
+packages/core build: ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+packages/core build: ℹ dist/index.d.mts  0.18 kB │ gzip: 0.13 kB
+packages/core build: ℹ 2 files, total: 0.33 kB
+packages/core build: ✔ Build complete in 241ms
+packages/core build: ✔ [publint] No issues found (9ms)
+packages/core build: Done
+$ typedoc
+[info] Loaded plugin typedoc-plugin-markdown
+[info] Loaded plugin typedoc-vitepress-theme
+[info] markdown generated at ./docs/api
+$ vitepress build
+
+  vitepress 2.0.0-alpha.19  (using vite 8.2.2)
+
+- building client + server bundles...
+✓ building client + server bundles...
+- rendering pages...
+✓ rendering pages...
+build complete in 2.84s.

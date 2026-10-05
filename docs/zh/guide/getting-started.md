@@ -3,21 +3,32 @@
 ## 环境要求
 
 - Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`
-- pnpm `11.21.0`（由根目录的 `packageManager` 字段固定版本）
+- pnpm `11.24.0`（由根目录的 `packageManager` 字段固定版本）
 
 ## 安装
 
-### 克隆仓库
+<!-- template-only:start -->
+
+### 初始化项目
+
+克隆或下载模板后，运行不依赖 node_modules 的初始化命令：
 
 ```bash
 git clone https://github.com/YunYouJun/starter-monorepo.git
 cd starter-monorepo
+node scripts/init.mjs --project-name my-library --package-name @acme/core \
+  --description "我的 TypeScript 工具库"
+cd ../my-library
 ```
+
+交互提示、名称规则、元数据处理和本地打包验证请参阅[初始化指南](./initialization.md)。
+
+<!-- template-only:end -->
 
 ### 安装依赖
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 ```
 
 ## 项目结构
@@ -94,6 +105,7 @@ pnpm lint
 ### 启动文档站点
 
 ```bash
+pnpm predocs
 pnpm docs:dev
 ```
 

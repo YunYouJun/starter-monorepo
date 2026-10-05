@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "starter-monorepo"
   text: "Monorepo Starter Template"
-  tagline: TypeScript Monorepo Starter with VitePress Documentation
+  tagline: "TypeScript Monorepo Starter with VitePress Documentation"
   image:
     src: /hero.png
     alt: Connected package cubes representing a monorepo workspace

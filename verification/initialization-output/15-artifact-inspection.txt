@@ -1,0 +1,7 @@
+PASS: tarball contains only dist/index.mjs, dist/index.d.mts, LICENSE, package.json and README.md.
+PASS: packed manifest name, exports and types match.
+PASS: English, Chinese and API HTML exist, show new project identity, and contain no template name/package placeholder.
+PASS: English and Chinese homepage imports use @acceptance/core; no undefined repository links.
+PASS: consumer resolves a package installed from the tarball, outside the generated workspace.
+Workspace library: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project/packages/core
+Consumer library: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/consumer/node_modules/.pnpm/@acceptance+core@file+..+..+..+..+..+..+..+..+var+folders+tx+zs0fhdtn52l29nbtqby57qlh00_b576a717492ab889e7e2c2aa7a4be999/node_modules/@acceptance/core

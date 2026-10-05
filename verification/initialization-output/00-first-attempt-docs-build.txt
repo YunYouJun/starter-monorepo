@@ -1,0 +1,66 @@
+$ pnpm build && pnpm predocs && pnpm -C docs run docs:build
+$ nr -r build
+Scope: 2 of 3 workspace projects
+packages/core build$ tsdown
+packages/core build: ℹ tsdown v0.22.14 powered by rolldown v1.2.6
+packages/core build: ℹ config file: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/packages/core/tsdown.config.ts
+packages/core build: ℹ entry: src/index.ts
+packages/core build: ℹ tsconfig: ../../tsconfig.json
+packages/core build: ℹ Build start
+packages/core build: ℹ Cleaning 2 files
+packages/core build: ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+packages/core build: ℹ dist/index.d.mts  0.18 kB │ gzip: 0.13 kB
+packages/core build: ℹ 2 files, total: 0.33 kB
+packages/core build: ✔ Build complete in 194ms
+packages/core build: ✔ [publint] No issues found (8ms)
+packages/core build: Done
+$ typedoc
+[info] Loaded plugin typedoc-plugin-markdown
+[info] Loaded plugin typedoc-vitepress-theme
+[info] markdown generated at ./docs/api
+$ vitepress build
+
+  vitepress 2.0.0-alpha.19  (using vite 8.2.2)
+
+- building client + server bundles...
+✗ Build failed in 364ms
+✗ building client + server bundles...
+build error:
+Build failed with 1 error:
+
+[UNRESOLVED_IMPORT] Could not resolve './style.css' in .vitepress/theme/index.ts
+   ╭─[ .vitepress/theme/index.ts:5:8 ]
+   │
+ 5 │ import "./style.css";
+   │        ──────┬──────
+   │              ╰──────── Module not found.
+   │
+   │ Help: '.vitepress/theme/index.ts' is imported by the following path:
+   │         - .vitepress/theme/index.ts
+   │         - ../node_modules/.pnpm/vitepress@2.0.0-alpha.19_@types+node@26.4.0_change-case@5.4.4_esbuild@0.28.2_jiti@2.7.0_c640bd51b58acc2e1b15ffabb0cc5bb7/node_modules/vitepress/dist/client/app/index.js
+───╯
+
+Build failed with 1 error:
+
+[UNRESOLVED_IMPORT] Could not resolve './style.css' in .vitepress/theme/index.ts
+   ╭─[ .vitepress/theme/index.ts:5:8 ]
+   │
+ 5 │ import "./style.css";
+   │        ──────┬──────
+   │              ╰──────── Module not found.
+   │
+   │ Help: '.vitepress/theme/index.ts' is imported by the following path:
+   │         - .vitepress/theme/index.ts
+   │         - ../node_modules/.pnpm/vitepress@2.0.0-alpha.19_@types+node@26.4.0_change-case@5.4.4_esbuild@0.28.2_jiti@2.7.0_c640bd51b58acc2e1b15ffabb0cc5bb7/node_modules/vitepress/dist/client/app/index.js
+───╯
+
+    at aggregateBindingErrorsIntoJsError (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/rolldown@1.2.6/node_modules/rolldown/dist/shared/error-HDibX49O.mjs:48:18)
+    at unwrapBindingResult (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/rolldown@1.2.6/node_modules/rolldown/dist/shared/error-HDibX49O.mjs:18:128)
+    at #build (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/rolldown@1.2.6/node_modules/rolldown/dist/shared/rolldown-C9Hfg50O.mjs:133:34)
+    at async buildEnvironment (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/vite@8.2.2_@types+node@26.4.0_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.13_yaml@2.9.0/node_modules/vite/dist/node/chunks/node.js:33821:66)
+    at async Object.build (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/vite@8.2.2_@types+node@26.4.0_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.13_yaml@2.9.0/node_modules/vite/dist/node/chunks/node.js:34242:19)
+    at async bundle (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/vitepress@2.0.0-alpha.19_@types+node@26.4.0_change-case@5.4.4_esbuild@0.28.2_jiti@2.7.0_c640bd51b58acc2e1b15ffabb0cc5bb7/node_modules/vitepress/dist/node/chunk-B0BRqWJx.js:29128:42)
+    at async task (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/vitepress@2.0.0-alpha.19_@types+node@26.4.0_change-case@5.4.4_esbuild@0.28.2_jiti@2.7.0_c640bd51b58acc2e1b15ffabb0cc5bb7/node_modules/vitepress/dist/node/chunk-B0BRqWJx.js:28290:14)
+    at async build (file:///private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-nVc0M3/project/node_modules/.pnpm/vitepress@2.0.0-alpha.19_@types+node@26.4.0_change-case@5.4.4_esbuild@0.28.2_jiti@2.7.0_c640bd51b58acc2e1b15ffabb0cc5bb7/node_modules/vitepress/dist/node/chunk-B0BRqWJx.js:32642:17)
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.

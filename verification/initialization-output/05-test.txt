@@ -1,0 +1,9 @@
+$ vitest run
+
+ RUN  v4.1.11 /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-xJz3Kw/project
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  06:03:45
+   Duration  191ms (transform 27ms, setup 0ms, import 43ms, tests 3ms, environment 0ms)

@@ -16,7 +16,8 @@ TypeScript Monorepo Starter Template (`starter-monorepo`) by YunYouJun.
 ```bash
 pnpm build          # Build all packages
 pnpm dev            # Dev mode (tsdown --watch)
-pnpm test           # Run tests
+pnpm test           # Run tests once
+pnpm test:watch     # Watch tests
 pnpm lint           # Lint (eslint --cache)
 pnpm typecheck      # Type check (tsc --noEmit)
 pnpm docs:dev       # Dev documentation site

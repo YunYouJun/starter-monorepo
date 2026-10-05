@@ -49,7 +49,7 @@ TypeScript 配置位于 `tsconfig.json`：
 
 ## ESLint 配置
 
-项目使用 `@antfu/eslint-config`，配置位于 `eslint.config.ts`：
+项目使用 `@antfu/eslint-config`，配置位于 `eslint.config.js`：
 
 ```typescript
 import antfu from '@antfu/eslint-config'
