@@ -2,6 +2,8 @@
 
 验收完成：2026-10-05（Asia/Shanghai）。本次保持 TypeScript 库模板定位，没有执行 npm publish、release、Git 提交或推送。
 
+依赖升级后的复验结果见[依赖升级验证记录](./dependency-upgrade.md)。下文保留升级前的首次验收记录。
+
 ## 环境与复现
 
 - macOS / darwin arm64，Node.js v24.18.0，pnpm 11.24.0。

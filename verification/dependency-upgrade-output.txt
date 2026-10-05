@@ -1,0 +1,256 @@
+$ node scripts/verify-init.mjs
+Acceptance artifacts: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5
+
+[pnpm-version] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm --version
+  cwd: /Users/yunyou/repos/github.com/YunYouJun/starter-monorepo/
+11.24.0
+
+[initialize] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/repos/github.com/YunYouJun/starter-monorepo/scripts/init.mjs --project-name acceptance-library --package-name @acceptance/core --description 验收 TypeScript library: "quotes", $& and \ paths --dir /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+  cwd: /Users/yunyou/repos/github.com/YunYouJun/starter-monorepo/
+Created /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+Library: packages/core
+
+Next, in the generated directory:
+  pnpm install --frozen-lockfile
+  pnpm typecheck
+  pnpm test
+  pnpm build
+  pnpm docs:build
+
+Repository not supplied: add your repository/homepage/bugs to package.json files and enable TypeDoc source links when ready.
+Author not supplied: add your package author when ready; the original MIT license attribution has been preserved.
+Documentation has no deployment URL yet. Initialize your own Git repository/remotes as needed. No packages were published.
+
+[install] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm install --frozen-lockfile
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+Scope: all 3 workspace projects
+✓ Lockfile passes supply-chain policies (verified 55s ago)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +632
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/yunyou/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 632, reused 632, downloaded 0, added 69
+Progress: resolved 632, reused 632, downloaded 0, added 275
+Progress: resolved 632, reused 632, downloaded 0, added 628
+Progress: resolved 632, reused 632, downloaded 0, added 632, done
+.../node_modules/simple-git-hooks postinstall$ node ./postinstall.js
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: [INFO] No `.git` root folder found, skipping
+.../node_modules/simple-git-hooks postinstall: Done
+
+devDependencies:
++ @acceptance/core 0.0.0 <- packages/core
++ @antfu/eslint-config 9.5.1
++ @antfu/ni 30.6.0
++ @antfu/utils 9.3.0
++ @types/node 26.6.4
++ bumpp 12.3.0
++ eslint 10.12.0
++ lint-staged 17.6.0
++ publint 0.3.25
++ simple-git-hooks 2.14.0
++ tsdown 0.23.0
++ tsx 4.23.15
++ typedoc 0.28.20
++ typedoc-plugin-markdown 4.13.1
++ typedoc-vitepress-theme 1.1.4
++ typescript 6.0.3
++ vite 8.3.2
++ vitest 5.0.3
+
+. prepare$ simple-git-hooks
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: [INFO] No `.git` root folder found, skipping
+. prepare: Done
+Done in 4.6s using pnpm v11.24.0
+
+[typecheck] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm typecheck
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+$ tsc --noEmit
+
+[test] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm test
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+$ vitest run
+
+ RUN  v5.0.3 /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  10:47:38
+   Duration  132ms (transform 58%, import 24%, worker 11%, tests 6%)
+
+
+[lint] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm lint
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+$ eslint --cache .
+
+[build] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm build
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+$ nr -r build
+Scope: 2 of 3 workspace projects
+packages/core build$ tsdown
+packages/core build: ℹ tsdown v0.23.0 powered by rolldown v1.2.12
+packages/core build: ℹ config file: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project/packages/core/tsdown.config.ts
+packages/core build: ℹ entry: src/index.ts
+packages/core build: ℹ tsconfig: ../../tsconfig.json
+packages/core build: ℹ Build start
+packages/core build: ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+packages/core build: ℹ dist/index.d.mts  0.17 kB │ gzip: 0.12 kB
+packages/core build: ℹ 2 files, total: 0.32 kB
+packages/core build: ✔ Build complete in 532ms
+packages/core build: ✔ [publint] No issues found (13ms)
+packages/core build: Done
+
+[docs-build] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm docs:build
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+$ pnpm build && pnpm predocs && pnpm -C docs run docs:build
+$ nr -r build
+Scope: 2 of 3 workspace projects
+packages/core build$ tsdown
+packages/core build: ℹ tsdown v0.23.0 powered by rolldown v1.2.12
+packages/core build: ℹ config file: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project/packages/core/tsdown.config.ts
+packages/core build: ℹ entry: src/index.ts
+packages/core build: ℹ tsconfig: ../../tsconfig.json
+packages/core build: ℹ Build start
+packages/core build: ℹ Cleaning 2 files
+packages/core build: ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+packages/core build: ℹ dist/index.d.mts  0.17 kB │ gzip: 0.12 kB
+packages/core build: ℹ 2 files, total: 0.32 kB
+packages/core build: ✔ Build complete in 225ms
+packages/core build: ✔ [publint] No issues found (9ms)
+packages/core build: Done
+$ typedoc
+[info] Loaded plugin typedoc-plugin-markdown
+[info] Loaded plugin typedoc-vitepress-theme
+[info] markdown generated at ./docs/api
+$ vitepress build
+
+  vitepress 2.0.0-alpha.20  (using vite 8.3.2)
+
+- building client + server bundles...
+✓ building client + server bundles...
+- rendering pages...
+✓ rendering pages...
+build complete in 2.51s.
+
+[pack] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm -C packages/core pack --pack-destination /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/artifacts
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project
+$ nr build
+$ tsdown
+ℹ tsdown v0.23.0 powered by rolldown v1.2.12
+ℹ config file: /private/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/project/packages/core/tsdown.config.ts
+ℹ entry: src/index.ts
+ℹ tsconfig: ../../tsconfig.json
+ℹ Build start
+ℹ Cleaning 2 files
+ℹ dist/index.mjs    0.15 kB │ gzip: 0.13 kB
+ℹ dist/index.d.mts  0.17 kB │ gzip: 0.12 kB
+ℹ 2 files, total: 0.32 kB
+✔ Build complete in 171ms
+✔ [publint] No issues found (8ms)
+package: @acceptance/core@0.0.0
+Tarball Contents
+dist/index.d.mts
+dist/index.mjs
+LICENSE
+package.json
+README.md
+Tarball Details
+/var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/artifacts/acceptance-core-0.0.0.tgz
+
+[consumer-install] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm add /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/artifacts/acceptance-core-0.0.0.tgz
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/consumer
+Progress: resolved 0, reused 0, downloaded 1, added 0
+Packages: +1
++
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/yunyou/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 1, reused 0, downloaded 1, added 1, done
+
+dependencies:
++ @acceptance/core 0.0.0
+
+Done in 463ms using pnpm v11.24.0
+
+[consumer-runtime] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node index.mjs
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/consumer
+consumer runtime OK: 1 + 2 = 3
+
+[consumer-typescript-install] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm add -D typescript@6.0.3
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/consumer
+✓ Lockfile passes supply-chain policies (verified 360ms ago)
+Progress: resolved 0, reused 1, downloaded 0, added 0
+Packages: +1
++
+Progress: resolved 2, reused 2, downloaded 0, added 1, done
+
+devDependencies:
++ typescript 6.0.3 (7.0.2 is available)
+
+Done in 1s using pnpm v11.24.0
+
+[consumer-types-nodenext] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm exec tsc --noEmit --strict --module NodeNext --target ES2022 index.ts
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/consumer
+
+[consumer-types-bundler] /Users/yunyou/Library/Application Support/fnm/node-versions/v24.18.0/installation/bin/node /Users/yunyou/Library/pnpm/.tools/pnpm/11.24.0/bin/pnpm exec tsc --noEmit --strict --module ESNext --moduleResolution Bundler --target ES2022 index.ts
+  cwd: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/consumer
+
+PASS: /var/folders/tx/zs0fhdtn52l29nbtqby57qlh0000gn/T/starter-monorepo-acceptance-pJVgv5/report.md
+Temporary files are retained for inspection.
