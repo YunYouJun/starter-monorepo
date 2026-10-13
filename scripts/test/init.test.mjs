@@ -1,6 +1,6 @@
 import { spawnSync } from 'node:child_process'
 import { existsSync } from 'node:fs'
-import { mkdtemp, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { cp, mkdtemp, readdir, readFile, realpath, rm, writeFile } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -135,6 +135,38 @@ describe('generated library workspace', () => {
     expect(files.get('docs/index.md')).not.toContain('View on GitHub')
     expect(files.get('docs/zh/index.md')).not.toContain('在 GitHub 查看')
     expect(files.get('README.md')).not.toContain('[![License]')
+  })
+
+  it('removes repository actions from a template checked out with CRLF', async () => {
+    const parent = await temporary()
+    const source = path.join(parent, 'template')
+    const dir = path.join(parent, 'project')
+    const excluded = new Set(['.git', 'node_modules', 'dist', 'cache', '.cache', 'verification'])
+    await cp(templateRoot, source, {
+      recursive: true,
+      filter: file => !path.relative(templateRoot, file).split(path.sep).some(part => excluded.has(part)),
+    })
+    for (const file of ['docs/index.md', 'docs/zh/index.md']) {
+      const filename = path.join(source, file)
+      const text = await readFile(filename, 'utf8')
+      await writeFile(filename, text.replace(/\r?\n/g, '\r\n'))
+    }
+
+    const result = spawnSync(process.execPath, [
+      await realpath(path.join(source, 'scripts/init.mjs')),
+      '--project-name',
+      base.projectName,
+      '--package-name',
+      base.packageName,
+      '--description',
+      base.description,
+      '--dir',
+      dir,
+    ], { cwd: parent, encoding: 'utf8', timeout: 5000 })
+
+    expect(result.status, result.stderr).toBe(0)
+    expect(await readFile(path.join(dir, 'docs/index.md'), 'utf8')).not.toContain('View on GitHub')
+    expect(await readFile(path.join(dir, 'docs/zh/index.md'), 'utf8')).not.toContain('在 GitHub 查看')
   })
 
   it('does not reinterpret user repository names containing template tokens', async () => {

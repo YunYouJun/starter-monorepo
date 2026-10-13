@@ -138,7 +138,8 @@ export async function initialize(options) {
   for (const [name, bytes] of files) {
     if (name.endsWith('.png'))
       continue
-    let text = bytes.toString().replace(/<!-- template-only:start -->[\s\S]*?<!-- template-only:end -->\n?/g, '')
+    let text = bytes.toString().replace(/\r\n/g, '\n')
+    text = text.replace(/<!-- template-only:start -->[\s\S]*?<!-- template-only:end -->\n?/g, '')
     if (name.endsWith('.md') && !repository) {
       text = text.replace(/ {4}- theme: alt\n {6}text: [^\n]+\n {6}link: https:\/\/github.com\/YunYouJun\/starter-monorepo\n/g, '')
         .split('\n')
