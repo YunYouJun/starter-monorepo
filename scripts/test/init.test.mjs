@@ -146,7 +146,8 @@ describe('generated library workspace', () => {
       recursive: true,
       filter: file => !path.relative(templateRoot, file).split(path.sep).some(part => excluded.has(part)),
     })
-    for (const file of ['docs/index.md', 'docs/zh/index.md']) {
+    const stylesheet = 'docs/.vitepress/theme/style.css'
+    for (const file of ['docs/index.md', 'docs/zh/index.md', stylesheet]) {
       const filename = path.join(source, file)
       const text = await readFile(filename, 'utf8')
       await writeFile(filename, text.replace(/\r?\n/g, '\r\n'))
@@ -167,6 +168,7 @@ describe('generated library workspace', () => {
     expect(result.status, result.stderr).toBe(0)
     expect(await readFile(path.join(dir, 'docs/index.md'), 'utf8')).not.toContain('View on GitHub')
     expect(await readFile(path.join(dir, 'docs/zh/index.md'), 'utf8')).not.toContain('在 GitHub 查看')
+    expect(await readFile(path.join(dir, stylesheet), 'utf8')).toBe(await readFile(path.join(source, stylesheet), 'utf8'))
   })
 
   it('does not reinterpret user repository names containing template tokens', async () => {
