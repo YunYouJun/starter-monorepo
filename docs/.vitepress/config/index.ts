@@ -6,7 +6,7 @@ import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import packageJson from '../../../package.json' with { type: 'json' }
 
-// A fresh checkout has no generated API docs until `pnpm predocs` runs.
+// A fresh checkout has no generated API docs until `pnpm docs:api` runs.
 const sidebarPath = new URL('../../api/typedoc-sidebar.json', import.meta.url)
 const typedocSidebar: DefaultTheme.SidebarItem[] = existsSync(sidebarPath)
   ? JSON.parse(readFileSync(sidebarPath, 'utf8'))
@@ -38,6 +38,9 @@ const EN_GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: 'Getting Started', link: '/guide/getting-started' },
   { text: 'Nuxt Web Application', link: '/guide/web-app' },
   { text: 'Configuration', link: '/guide/configuration' },
+  { text: 'Development', link: '/guide/development' },
+  { text: 'Build & Validation', link: '/guide/build' },
+  { text: 'Release', link: '/guide/release' },
 ]
 
 const ZH_GUIDES: DefaultTheme.NavItemWithLink[] = [
@@ -45,6 +48,9 @@ const ZH_GUIDES: DefaultTheme.NavItemWithLink[] = [
   { text: '快速开始', link: '/zh/guide/getting-started' },
   { text: 'Nuxt Web 应用', link: '/zh/guide/web-app' },
   { text: '配置', link: '/zh/guide/configuration' },
+  { text: '开发', link: '/zh/guide/development' },
+  { text: '构建与验证', link: '/zh/guide/build' },
+  { text: '发布', link: '/zh/guide/release' },
 ]
 
 const EN_VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [

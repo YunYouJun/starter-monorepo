@@ -19,7 +19,7 @@ const windowsDevice = /^(?:con|prn|aux|nul|com\d|lpt\d)(?:\.|$)/i
 const textExtensions = new Set(['.md', '.json', '.yaml', '.yml', '.ts', '.js', '.mjs', '.css', '.vue', '.tsx', '.jsx', '.svg'])
 const excluded = new Set(['node_modules', '.git', 'dist', '.nuxt', '.output', '.cache', '.temp', '.vite-temp', 'cache', 'coverage', '.DS_Store', '.eslintcache'])
 const rootFiles = ['package.json', 'pnpm-workspace.yaml', 'pnpm-lock.yaml', 'tsconfig.json', 'typedoc.json', 'eslint.config.js', '.gitignore', '.node-version', 'README.md', 'LICENSE', 'AGENTS.md', 'CLAUDE.md']
-const rootDirectories = ['packages', 'docs', 'apps', '.github', '.vscode']
+const rootDirectories = ['packages', 'test', 'docs', 'apps', '.github', '.vscode']
 
 const help = `Create a TypeScript library monorepo (no dependency installation or publishing).
 

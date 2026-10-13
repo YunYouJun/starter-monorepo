@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`
-- pnpm `11.24.0` (pinned by the root `packageManager` field)
+- pnpm `11.28.5` (pinned by the root `packageManager` field)
 
 ## Installation
 
@@ -109,7 +109,6 @@ pnpm lint
 ### Start Documentation Site
 
 ```bash
-pnpm predocs
 pnpm docs:dev
 ```
 
@@ -118,13 +117,15 @@ Visit `http://localhost:5173` to view the documentation.
 ### Generate API Documentation
 
 ```bash
-pnpm predocs
+pnpm docs:api
 ```
 
 This will:
 1. Read source code from `packages/*/src`
 2. Parse JSDoc comments and TypeScript types
 3. Generate Markdown docs in `docs/api/`
+
+`pnpm docs:dev` generates the API pages before starting VitePress, so it also works on a fresh checkout. `pnpm predocs` remains an alias for `pnpm docs:api`.
 
 ### Build Documentation
 

@@ -70,7 +70,7 @@ pnpm build
 pnpm docs:build
 ```
 
-本地启动文档前先运行一次 `pnpm predocs`，再运行 `pnpm docs:dev`。
+运行 `pnpm docs:dev` 会先生成 API 页面，再启动本地 VitePress 文档站点。
 `pnpm test` 单次执行，`pnpm test:watch` 监听变更。
 
 验证消费者实际使用的打包产物：

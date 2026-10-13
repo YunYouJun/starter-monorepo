@@ -40,9 +40,13 @@ async function run(label, command, args, cwd) {
 }
 
 async function pnpm(label, args, cwd = project) {
-  // pnpm run provides its JS entrypoint, which also works without a shell on Windows.
-  if (process.env.npm_execpath)
-    return run(label, process.execPath, [process.env.npm_execpath, ...args], cwd)
+  // npm_execpath may point to a JavaScript CLI or a standalone executable.
+  const executable = process.env.npm_execpath
+  if (executable) {
+    return /\.[cm]?js$/i.test(executable)
+      ? run(label, process.execPath, [executable, ...args], cwd)
+      : run(label, executable, args, cwd)
+  }
   return run(label, 'pnpm', args, cwd)
 }
 
@@ -54,6 +58,7 @@ try {
   await pnpm('test', ['test'])
   await pnpm('lint', ['lint'])
   await pnpm('build', ['build'])
+  await pnpm('package-exports', ['test:exports'])
   await pnpm('docs-build', ['docs:build'])
   await mkdir(artifacts)
   await pnpm('pack', ['-C', 'packages/core', 'pack', '--pack-destination', artifacts])

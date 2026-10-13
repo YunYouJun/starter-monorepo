@@ -11,7 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    DocsProjectCard: typeof import('./../../node_modules/.pnpm/@yunyoujun+docs@0.1.14_vite@8.3.2_@types+node@26.6.4_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1_/node_modules/@yunyoujun/docs/client/components/DocsProjectCard.vue')['default']
-    DocsProjectList: typeof import('./../../node_modules/.pnpm/@yunyoujun+docs@0.1.14_vite@8.3.2_@types+node@26.6.4_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1_/node_modules/@yunyoujun/docs/client/components/DocsProjectList.vue')['default']
+    DocsProjectCard: typeof import('./../../node_modules/.pnpm/@yunyoujun+docs@0.1.14_vite@8.3.4_@types+node@24.19.2_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1_/node_modules/@yunyoujun/docs/client/components/DocsProjectCard.vue')['default']
+    DocsProjectList: typeof import('./../../node_modules/.pnpm/@yunyoujun+docs@0.1.14_vite@8.3.4_@types+node@24.19.2_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1_/node_modules/@yunyoujun/docs/client/components/DocsProjectList.vue')['default']
   }
 }

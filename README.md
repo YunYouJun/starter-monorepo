@@ -12,9 +12,11 @@ TypeScript Monorepo Starter with VitePress Documentation
 
 <!-- template-only:start -->
 
-Run the initializer before installing dependencies (Node.js as specified in `.node-version`):
+Clone the template, then run the initializer before installing dependencies (Node.js as specified in `.node-version`):
 
 ```bash
+git clone https://github.com/YunYouJun/starter-monorepo.git
+cd starter-monorepo
 node scripts/init.mjs --project-name my-library --package-name @acme/core \
   --description "My TypeScript library"
 cd ../my-library
@@ -41,7 +43,7 @@ and `pnpm docs:build`. Use `pnpm test:watch` for watch mode.
 
 ## 📚 Documentation
 
-Run `pnpm predocs` then `pnpm docs:dev` to view the documentation locally.
+Run `pnpm docs:dev` to generate API pages and view the documentation locally.
 Configure your own hosting URL after deployment.
 
 ## ✨ Features
@@ -50,6 +52,7 @@ Configure your own hosting URL after deployment.
 - 🚀 Rolldown-powered library builds with tsdown
 - 📝 Full TypeScript support
 - ✅ Vitest testing framework
+- 🔎 Native Node.js package import and declaration file smoke tests
 - 📚 Auto-generated API docs (TypeDoc + VitePress)
 - 🔧 ESLint + Git hooks for code quality
 - 🎨 Modern documentation site
@@ -75,7 +78,7 @@ console.log(one, two) // 1 2
 
 ## 📖 More
 
-For detailed documentation, see [Getting Started](./docs/guide/getting-started.md).
+For detailed documentation, see [Getting Started](./docs/guide/getting-started.md). Maintainers can follow the [development](./docs/guide/development.md), [build](./docs/guide/build.md), and [release](./docs/guide/release.md) guides.
 
 ## Optional Nuxt App
 
@@ -89,12 +92,15 @@ copied from the standalone template.
 
 <!-- template-only:start -->
 
-## Modify
+## Use as a Template
 
 The initializer updates `pkg-placeholder` and `starter-monorepo` automatically.
 For a manual setup without the initializer:
 
-- [ ] replace `pkg-placeholder` `starter-monorepo` in repo
+- [ ] Rename `pkg-placeholder` in package manifests, imports, tests, and `tsconfig.json` paths.
+- [ ] Replace `starter-monorepo`, repository URLs, author, license, funding, and package descriptions with your project's metadata.
+- [ ] Update TypeDoc entry points and source links, documentation title and deployment URL, and README badges.
+- [ ] Review package exports, CI release settings, and npm publishing access.
 
 ## [Sponsors](https://www.yunyoujun.cn/sponsors/)
 

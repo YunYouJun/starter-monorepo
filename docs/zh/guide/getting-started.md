@@ -3,7 +3,7 @@
 ## 环境要求
 
 - Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`
-- pnpm `11.24.0`（由根目录的 `packageManager` 字段固定版本）
+- pnpm `11.28.5`（由根目录的 `packageManager` 字段固定版本）
 
 ## 安装
 
@@ -105,7 +105,6 @@ pnpm lint
 ### 启动文档站点
 
 ```bash
-pnpm predocs
 pnpm docs:dev
 ```
 
@@ -114,7 +113,7 @@ pnpm docs:dev
 ### 生成 API 文档
 
 ```bash
-pnpm predocs
+pnpm docs:api
 ```
 
 此命令将：
@@ -122,6 +121,8 @@ pnpm predocs
 1. 读取 `packages/*/src` 中的源代码
 2. 解析 JSDoc 注释和 TypeScript 类型
 3. 在 `docs/api/` 中生成 Markdown 文档
+
+`pnpm docs:dev` 会先生成 API 页面，首次克隆后也可直接启动。`pnpm predocs` 保留为 `pnpm docs:api` 的兼容别名。
 
 ### 构建文档
 

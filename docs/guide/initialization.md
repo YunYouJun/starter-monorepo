@@ -81,7 +81,7 @@ pnpm build
 pnpm docs:build
 ```
 
-For local documentation development, run `pnpm predocs` once before `pnpm docs:dev`.
+For local documentation development, `pnpm docs:dev` generates the API pages before starting VitePress.
 `pnpm test` runs once; `pnpm test:watch` watches for changes.
 
 To check the actual package consumers receive:

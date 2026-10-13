@@ -18,9 +18,11 @@ pnpm build          # Build all packages
 pnpm dev            # Dev mode (tsdown --watch)
 pnpm test           # Run tests once
 pnpm test:watch     # Watch tests
+pnpm test:exports   # Build and validate the native Node.js package entry
 pnpm lint           # Lint (eslint --cache)
 pnpm typecheck      # Type check (tsc --noEmit)
 pnpm docs:dev       # Dev documentation site
+pnpm docs:api       # Generate API pages and sidebar with TypeDoc
 pnpm docs:build     # Build documentation (typedoc + vitepress)
 pnpm release        # bumpp -r && publish
 ```
